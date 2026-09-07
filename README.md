@@ -59,6 +59,18 @@
 
 `data/processed/`의 파일은 `src/train_pipeline.py` 또는 전처리 노트북으로 생성·갱신합니다. 대회 데이터의 재배포는 하지 않습니다.
 
+## 최종 선택 구성
+
+최종 제출 기준 조합은 **EXP04 iTransformer + V4 전처리 데이터**입니다.
+
+| 구성 요소 | 선택 |
+|---|---|
+| 모델 | `experiments/exp04.ipynb` — iTransformer + Competition-Aligned Weighted RMSE Loss |
+| 학습 데이터 | `data/processed/train_final_physics_v4.csv` |
+| 데이터 생성 | `experiments/preprocessing/train_v4.ipynb` |
+| 재현 노트북 | `experiments/FINAL_REPRO_EXP04.ipynb` |
+| 제출 산출물 | 기본 실행: `submission/submission_exp04.csv` · 재현 노트북: `submission/submission_exp04_final.csv` |
+
 ## 실험 기록
 
 모든 예측 실험은 기본적으로 과거 48시간(289 step) 문맥에서 `+3/+6/+9/+12/+18/+24h` 유의파고를 예측합니다. `OOF`는 앙상블 가중치 탐색용 Out-of-Fold 예측이며, 표의 산출물은 실행 시 `oof/`, `submission/`, 또는 `artifacts/experiments/`에 생성됩니다.
