@@ -1,0 +1,11 @@
+# Python and Jupyter runtime files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.parquet_deps/
+
+# Local experiment runtime artifacts
+artifacts/
+
+# Competition data and derived datasets (download or generate locally)
+data/
